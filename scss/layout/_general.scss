@@ -1,0 +1,30 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 72px;
+
+    @media #{$brk-desktop} {
+        margin-top: 125px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 72px);
+
+    @media #{$brk-desktop} {
+        min-height: calc(100vh - 126px);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6;
+}

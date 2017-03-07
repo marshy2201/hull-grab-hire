@@ -1,0 +1,22 @@
+﻿#accordion-nav {
+    display: none;
+    background-color: rgba(10,10,10, .9);
+    color: #fff;
+    height: calc(100vh);
+    width: 80%;
+    position: absolute;
+    top: 73px;
+}
+
+#accordion-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 10px;
+    display: inline-block;
+    background-color: #27196f;
+    width: 90%;
+}
+
+#accordion-nav li {
+    padding: 5px;    
+}

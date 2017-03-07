@@ -1,0 +1,72 @@
+﻿
+.primary {
+    @media #{$brk-desktop} {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.primary ul {
+    padding-left: 30px;
+}
+
+.primary li {
+    list-style: square;
+    padding: 5px 0;
+}
+
+.index-info {
+    @media #{$brk-desktop} {
+        padding-right: 15px;
+    }
+}
+
+.index-info a {
+    color: $color1;
+    text-decoration: underline;
+}
+
+.index-info a:hover {
+    color: $color2;
+}
+
+#tel::after {
+    content: url('../img/icons/phone.png');
+    margin-left: 10px;
+}
+
+#email::after {
+    content: url('../img/icons/email.png');
+    margin-left: 10px;
+}
+
+.index-images img {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 3px #000;
+
+    @media #{$brk-desktop} {
+        width: 100%;
+        max-height: 250px;
+    }
+}
+
+.index-images {
+    padding: 24px 0;
+
+    @media #{$brk-desktop} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 500px;
+        padding: 0 0 0 15px;
+    }
+}
+
+.secondary .price-guide {
+    margin-bottom: 0;
+    @media #{$brk-desktop} {
+        margin-top: 98px;
+    }
+}

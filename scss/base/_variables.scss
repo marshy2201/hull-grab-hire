@@ -1,0 +1,17 @@
+﻿
+/************* Media Queries *************/
+
+$brk-tablet : '(min-width: 725px)';
+$brk-desktop: '(min-width: 1025px)';
+
+/************* Colors *************/
+
+$color1 : #211F60;
+$color2 : #AB1F20; 
+
+/************* background *************/
+
+$banner-bg         : "linear-gradient(#fff, transparent 15%), linear-gradient(to top, #fff, transparent 10%),";
+$banner-bg-sp      : "center / cover";
+$banner-bg-mobile  : "../img/mobile-size-images/image"; 
+$banner-bg-desktop : "../img/image";

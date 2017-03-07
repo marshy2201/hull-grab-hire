@@ -1,0 +1,25 @@
+﻿
+.price-guide {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.price-guide a {
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 1.2em;
+    background-color: $color1;
+    padding: 15px;
+    border-radius: 3px;
+    width: 80%;
+    transition: opacity .3s;
+
+    @media #{$brk-tablet} {
+        width: 60%;
+        max-width: 400px;
+    }
+}
+
+.price-guide a:hover {
+    opacity: .8;
+}
