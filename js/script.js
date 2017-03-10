@@ -11,5 +11,17 @@ $(() => {
         });
     });
 
+    //change label colors on click
+    $('label').click('click', function () {
+        $('label').removeClass('input-checked');
+        $(this).addClass('input-checked');
+    });
+     
+
+    //document.querySelector('label').style.backgroundColor = '#211F60';
+    //$('label').css({ 'background-color': '#211F60' });
 
 });
+
+
+
