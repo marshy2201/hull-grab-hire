@@ -42,14 +42,17 @@
     z-index: 500;
     height: 100%;
     width: 100%;
-    top: 130px;
+    top: 80px;
+    @media #{$brk-desktop} {
+        top: 120px;
+    }
 }
 
 .banner-background-absolute p {
-    top: 175px;
+    top: 125px;
 
     @media #{$brk-desktop} {
-        top: 200px;
+        top: 170px;
     }
 }
 
@@ -60,7 +63,6 @@
 .banner p {
     font-size: 1.5em;
 }
-
 
 /********** backgrounds *******/
 
