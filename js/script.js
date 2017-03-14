@@ -1,9 +1,12 @@
 $(function() {
 
-    //toggle nav
+    //navigation
     $('#menu-icon').on('click', function () {
+        //toggle nav
         $('nav').animate({ width: 'toggle' }, 150);
-        $('#menu-icon').toggleClass('show');
+
+        //toggle menu icon
+        $(this).toggleClass('menu-toggle');
 
         //hide scroll
         $('body').css("overflow", function(_,val) {
