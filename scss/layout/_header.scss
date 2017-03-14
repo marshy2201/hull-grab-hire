@@ -60,27 +60,3 @@
     }
 }
 
-#menu-icon,
-#close-icon {
-    width: 30px;
-    position: absolute;
-    top: 20px;
-    left: 25px;
-    cursor: pointer;
-
-    @media #{$brk-desktop} {
-        display: none;
-    }
-}
-
-.hide {
-    opacity: 0;
-}
-
-.show {
-    opacity: 1;
-}
-
-#close-icon {
-    z-index: -1;
-}
