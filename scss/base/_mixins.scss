@@ -1,0 +1,22 @@
+﻿
+//slider images
+@mixin background-slider-images($image-number) {
+    background-image: #{$banner-bg} url("../img/image#{$image-number}.jpg");
+}
+
+//background images
+@mixin background-images($image-number) {
+    background: #{$banner-bg}url('#{$banner-bg-mobile}#{$image-number}-mobile.jpg') #{$banner-bg-sp};
+
+    @media #{$brk-tablet} {
+        background: #{$banner-bg}url('#{$banner-bg-desktop}#{$image-number}.jpg') #{$banner-bg-sp};
+    }
+}
+
+//clearfix
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+

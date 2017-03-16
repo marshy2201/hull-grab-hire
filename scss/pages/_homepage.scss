@@ -4,31 +4,33 @@
         display: flex;
         justify-content: space-between;
     }
-}
 
-.primary ul {
-    padding-left: 30px;
-}
+    ul {
+        padding-left: 30px;
+    }
 
-.primary li {
-    list-style: square;
-    padding: 5px 0;
+    li {
+        list-style: square;
+        padding: 5px 0;
+    }
 }
 
 .index-info {
     @media #{$brk-desktop} {
         padding-right: 15px;
     }
+
+    a {
+        color: $color1;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color2;
+        }
+    }
 }
 
-.index-info a {
-    color: $color1;
-    text-decoration: underline;
-}
 
-.index-info a:hover {
-    color: $color2;
-}
 
 #tel::after {
     content: url('../img/icons/phone.png');
@@ -40,18 +42,6 @@
     margin-left: 10px;
 }
 
-.index-images img {
-    width: 100%;
-    padding: 5px;
-    margin: 10px 0;
-    box-shadow: 0 0 3px #000;
-
-    @media #{$brk-desktop} {
-        width: 100%;
-        max-height: 250px;
-    }
-}
-
 .index-images {
     padding: 24px 0;
 
@@ -61,6 +51,18 @@
         justify-content: center;
         width: 500px;
         padding: 0 0 0 15px;
+    }
+
+    img {
+        width: 100%;
+        padding: 5px;
+        margin: 10px 0;
+        box-shadow: 0 0 3px #000;
+
+        @media #{$brk-desktop} {
+            width: 100%;
+            max-height: 250px;
+        }
     }
 }
 

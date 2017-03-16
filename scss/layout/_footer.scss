@@ -6,6 +6,12 @@
     font-size: 0.8em;
     border-top: 5px solid #444;
     
+    a {
+        text-decoration: underline;
+        &:hover {
+            color: $color2;
+        }
+    }
 }
 
 .footer-container {
@@ -20,27 +26,25 @@
     @media #{$brk-desktop} {
         width: 70%;
     }
-}
 
-.footer-container div:first-child {
-    @media #{$brk-tablet} {
-        text-align: left;
+    div {
+
+        &:first-child {
+            @media #{$brk-tablet} {
+                text-align: left;
+            }
+        }
+
+        &:last-child {
+            margin-top: 48px;
+
+            @media #{$brk-tablet} {
+                margin-top: 0;
+                text-align: right;
+            }
+        }
     }
 }
 
-.footer-container div:last-child {
-    margin-top: 48px;
 
-    @media #{$brk-tablet} {
-        margin-top: 0;
-        text-align: right;
-    }
-}
 
-footer a {
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: $color2;
-}

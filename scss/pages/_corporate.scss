@@ -1,21 +1,26 @@
 ﻿
-.primary-corporate ul {
-    padding-left: 30px;
+.primary-corporate {
+
+    ul {
+        padding-left: 30px;
+    }
+
+    li {
+        list-style: square;
+        padding: 5px;
+    }
+
+    h3 {
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .price-guide {
+        margin-top: 48px;
+    }
+
 }
 
-.primary-corporate li {
-    list-style: square;
-    padding: 5px;
-}
-
-.primary-corporate h3 {
-    margin-top: 40px;
-}
-
-.primary-corporate h3:first-child {
-    margin-top: 0;
-}
-
-.primary-corporate .price-guide {
-    margin-top: 48px;
-}

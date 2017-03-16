@@ -13,13 +13,15 @@
         max-width: 1100px;
         padding: 98px 0;
     }
-}
 
-.container:first-child {
-    display: none;
+    &:first-child {
+        display: none;
 
-    @media #{$brk-desktop} {
-        display: block;
-        padding: 0;
+        @media #{$brk-desktop} {
+            display: block;
+            padding: 0;
+        }
     }
 }
+
+

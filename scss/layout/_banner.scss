@@ -16,6 +16,14 @@
 
     position: relative;
     overflow: hidden;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
 }
 
 .background-none {
@@ -34,68 +42,44 @@
 
 .banner-background-absolute {
     padding: 0;
-}
 
-.banner-background-absolute h2,
-.banner-background-absolute p {
-    position: absolute;
-    z-index: 500;
-    height: 100%;
-    width: 100%;
-    top: 80px;
-    @media #{$brk-desktop} {
-        top: 120px;
+    h2,
+    p {
+        position: absolute;
+        z-index: 500;
+        height: 100%;
+        width: 100%;
+        top: 80px;
+        @media #{$brk-desktop} {
+            top: 120px;
+        }
     }
-}
 
-.banner-background-absolute p {
-    top: 125px;
+    p {
+        top: 125px;
 
-    @media #{$brk-desktop} {
-        top: 170px;
+        @media #{$brk-desktop} {
+            top: 170px;
+        }
     }
-}
-
-.banner h2 {
-    text-transform: uppercase;
-}
-
-.banner p {
-    font-size: 1.5em;
 }
 
 /********** backgrounds *******/
 
 #banner-about {
-    background: #{$banner-bg}url('#{$banner-bg-mobile}6-mobile.jpg') #{$banner-bg-sp};
-
-    @media #{$brk-tablet} {
-        background: #{$banner-bg}url('#{$banner-bg-desktop}6.jpg') #{$banner-bg-sp};
-    }
+    @include background-images(6);
 }
 
 #banner-ordering {
-    background: #{$banner-bg}url('#{$banner-bg-mobile}8-mobile.jpg') #{$banner-bg-sp};
-
-    @media #{$brk-tablet} {
-        background: #{$banner-bg}url('#{$banner-bg-desktop}8.jpg') #{$banner-bg-sp};
-    }
+    @include background-images(8);
 }
 
 #banner-services {
-    background: #{$banner-bg}url('#{$banner-bg-mobile}7-mobile.jpg') #{$banner-bg-sp};
-
-    @media #{$brk-tablet} {
-        background: #{$banner-bg}url('#{$banner-bg-desktop}7.jpg') #{$banner-bg-sp};
-    }
+    @include background-images(7);
 }
 
 #banner-corporate {
-    background: #{$banner-bg}url('#{$banner-bg-mobile}4-mobile.jpg') #{$banner-bg-sp};
-
-    @media #{$brk-tablet} {
-        background: #{$banner-bg}url('#{$banner-bg-desktop}4.jpg') #{$banner-bg-sp};
-    }
+    @include background-images(4);
 }
 
 

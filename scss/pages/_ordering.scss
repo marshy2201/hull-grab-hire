@@ -9,50 +9,62 @@
 }
 
 .material {
-    display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 72px;
+
+    @media #{$brk-tablet} {
+        display: flex;
+        margin-bottom: 24px;
+    }
+    
     @media #{$brk-desktop} {
         flex-basis: 50%;
         margin-bottom: 72px;
     }
-}
 
-.material div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    div {
 
-.material div:last-child {
-    margin-left: 25px;
-}
+        &:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 24px;
 
-.material img {
-    width: 150px;
+            @media #{$brk-tablet} {
+                flex-direction: column;    
+            }
+        }
 
-    @media #{$brk-tablet} {
+        &:last-child {
+            @media #{$brk-tablet} {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    img {
         width: 200px;
+
+        @media #{$brk-desktop} {
+            width: 250px;
+        }
     }
 
-    @media #{$brk-desktop} {
-        width: 250px;
+    &:nth-child(odd) div:last-child {
+        @media #{$brk-desktop} {
+            padding-right: 20px;
+        }
     }
+
+    &:nth-child(even) div:first-child {
+        @media #{$brk-desktop} {
+            padding-left: 20px;
+        }
+    }
+
 }
 
 hr {
     margin-top: 16px;
-}
-
-.material:nth-child(odd) div:last-child {
-    @media #{$brk-desktop} {
-        padding-right: 20px;
-    }
-}
-
-.material:nth-child(even) div:first-child {
-    @media #{$brk-desktop} {
-        padding-left: 20px;
-    }
 }
 
 .primary-ordering .price-guide {
@@ -63,37 +75,42 @@ hr {
     }
 }
 
-.secondary-ordering h3 {
-    margin-top: 48px;    
-}
+.secondary-ordering {
 
-.secondary-ordering h3:first-child,
-.secondary-ordering h3:nth-child(3) {
-    margin-top: 0px;
-}
-
-.secondary-ordering ul {
-    padding-left: 30px;
-}
-
-.secondary-ordering li {
-    padding: 5px;
-    list-style: square;
-    line-height: 1.5;
-}
-
-.secondary-ordering span {
-    color: $color2;
-    font-weight: bold;
-}
-
-.secondary-ordering i {
-    color: $color1;
-    margin: 24px 0;
-    display: inline-block;
-    padding: 0 24px;
-
-    @media #{$brk-desktop} {
-        padding: 0 70px;
+    h3 {
+        margin-top: 48px; 
+        
+        &:first-child,
+        &:nth-child(3) {
+            margin-top: 0px;
+        }   
     }
+
+    ul {
+        padding-left: 30px;
+    }
+
+    li {
+        padding: 5px;
+        list-style: square;
+        line-height: 1.5;
+    }
+
+    span {
+        color: $color2;
+        font-weight: bold;
+    }
+
+    i {
+        color: $color1;
+        margin: 24px 0;
+        display: inline-block;
+        padding: 0 24px;
+
+        @media #{$brk-desktop} {
+            padding: 0 70px;
+        }
+    }
+
 }
+

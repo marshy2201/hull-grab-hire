@@ -3,20 +3,20 @@
 .button-sliders {
     text-align: center;
     margin-top: 24px;
-}
 
-.button-sliders label {
-    min-height: 10px;
-    width: 10px;
-    background-color: #fff;
-    display: inline-block;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid $color1;
-    margin: 0 10px;
-    @media #{$brk-desktop} {
-        min-height: 12px;
-        width: 12px;
+    label {
+        min-height: 10px;
+        width: 10px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid $color1;
+        margin: 0 10px;
+        @media #{$brk-desktop} {
+            min-height: 12px;
+            width: 12px;
+        }
     }
 }
 
@@ -50,23 +50,23 @@ input[type="radio"] {
 }
 
 .slide-1 {
-    background-image: #{$banner-bg} url('../img/image1.jpg');
+    @include background-slider-images(1);
 }
 
 .slide-2 {
-    background-image: #{$banner-bg} url('../img/image4.jpg');
+    @include background-slider-images(4);
 }
 
 .slide-3 {
-    background-image: #{$banner-bg} url('../img/image6.jpg');
+    @include background-slider-images(6);
 }
 
 .slide-4 {
-    background-image: #{$banner-bg} url('../img/image7.jpg');
+    @include background-slider-images(7);
 }
 
 .slide-5 {
-    background-image: #{$banner-bg} url('../img/image8.jpg');
+    @include background-slider-images(8);
 }
 
 [id^="slide"]:checked + .slide {
@@ -89,17 +89,18 @@ input[type="radio"] {
         top: 170px;
         width: 100px;
     }
-}
 
-.arrows:hover {
-    @media #{$brk-desktop} {
-        transform: scale(1.2);
-        box-shadow: 0 0 10px #fff;
+    &:hover {
+        @media #{$brk-desktop} {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px #fff;
+        }
     }
 }
 
 #arrow-right {
     right: -20px;
+    
     @media #{$brk-desktop} {
         right: 10%;
     }
