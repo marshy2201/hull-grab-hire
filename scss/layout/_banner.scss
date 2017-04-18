@@ -50,6 +50,7 @@
         height: 100%;
         width: 100%;
         top: 80px;
+        transition: opacity .5s;
         @media #{$brk-desktop} {
             top: 120px;
         }
@@ -61,6 +62,11 @@
         @media #{$brk-desktop} {
             top: 170px;
         }
+    }
+ 
+    &:hover h2,
+    &:hover p {
+        opacity: 0;
     }
 }
 

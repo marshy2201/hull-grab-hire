@@ -1,7 +1,8 @@
 $(function() {
 
+
     //navigation
-    $('#menu-icon').on('click', function () {
+    function menuIconNav() {
         //toggle nav
         $('nav').animate({ width: 'toggle' }, 150);
 
@@ -9,48 +10,39 @@ $(function() {
         $(this).toggleClass('menu-toggle');
 
         //hide scroll
-        $('body').css("overflow", function(_,val) {
+        $('body').css("overflow", function (_, val) {
             return val == "hidden" ? "scroll" : "hidden";
         });
-    });
-     
+    } 
+
     //Arrows change radio input checked
-    $('.arrows').on('click', function () {
+    function arrowsMoveInputChecked() {
         if ($(this).is('#arrow-right')) {
-            $(this).prev().find('input:checked').next().next().prop('checked', true);
+            $(this).siblings('div').find('input:checked').next().next().prop('checked', true);
         }
 
         if ($(this).is('#arrow-left')) {
-            $(this).prev().prev().find('input:checked').prev().prev().prop('checked', true);
+            $(this).siblings('div').find('input:checked').prev().prev().prop('checked', true);
         }
-    });
+    }
 
     //change label colors on click
-    $('label').click('click', function () {
+    function labelChecked() {
         $('label').removeClass('input-checked');
         $(this).addClass('input-checked');
-    });
+    }
 
     //change label colors when radio inputs checked
-    $('.arrows').on('click', function () {
-        if ($('#slide-button-1').is(':checked')) {
-            $('label').removeClass('input-checked');
-            $('#sb1').addClass('input-checked');
-        } else if ($('#slide-button-2').is(':checked')) {
-            $('label').removeClass('input-checked');
-            $('#sb2').addClass('input-checked');
-        } else if ($('#slide-button-3').is(':checked')) {
-            $('label').removeClass('input-checked');
-            $('#sb3').addClass('input-checked');
-        } else if ($('#slide-button-4').is(':checked')) {
-            $('label').removeClass('input-checked');
-            $('#sb4').addClass('input-checked');
-        } else if ($('#slide-button-5').is(':checked')) {
-            $('label').removeClass('input-checked');
-            $('#sb5').addClass('input-checked');
-        }
-    });
+    function arrowsMoveLabelChecked() {
+        const $labelChecked = $('label[for="' + $('input:checked').attr('id') + '"]');
+        $('label').removeClass('input-checked');
+        $labelChecked.addClass('input-checked');
+    }
 
+    //events
+    $('#menu-icon').click(menuIconNav);
+    $('.arrows').click(arrowsMoveInputChecked).click(arrowsMoveLabelChecked);
+    $('label').click(labelChecked);
 
 });
 
